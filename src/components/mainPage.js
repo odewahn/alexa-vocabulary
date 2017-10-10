@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import VocabularyInput from "./vocabularyInput";
 import VocabularyOutput from "./vocabularyOutput";
 
-import { Grid, Cell } from "material-grid/";
+import { Grid, Cell } from "material-grid";
+
 import { setParsed } from "../state/vocabulary";
 
 class mainPage extends React.Component {
@@ -14,10 +15,10 @@ class mainPage extends React.Component {
   render() {
     return (
       <Grid>
-        <Cell col={4}>
+        <Cell lg={4}>
           <VocabularyInput />
         </Cell>
-        <Cell col={8}>
+        <Cell lg={8}>
           <VocabularyOutput />
         </Cell>
       </Grid>

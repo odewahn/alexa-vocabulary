@@ -17,6 +17,30 @@ class VocabularyInput extends React.Component {
   render() {
     return (
       <div>
+        <div
+          style={{
+            background: "#eee",
+            borderRadius: "5px",
+            width: "95%",
+            padding: "10px"
+          }}
+        >
+          <p>
+            This is a quick way to get an Alexa vocabulary model from a list. To use it:
+            <ol>
+              <li>Provide a name for your topic.</li>
+              <li>
+                Put each topic on its own line; add synomyns on the same line as comma separated values.
+              </li>
+              <li>
+                Copy the model to the clipboard.
+              </li>
+              <li>
+                Paste it into the appropriate section in your model file.
+              </li>
+            </ol>
+          </p>
+        </div>
         <TextField
           name="name"
           floatingLabelText="Vocabulary name"
