@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { RaisedButton, TextField, FontIcon } from "material-ui";
 
-import { setVocabularyField } from "../state/vocabulary";
+import { setVocabularyField, setParsed } from "../state/vocabulary";
 
 class VocabularyInput extends React.Component {
   constructor(props) {
@@ -12,29 +12,31 @@ class VocabularyInput extends React.Component {
   }
   setField(e) {
     this.props.dispatch(setVocabularyField(e.target.name, e.target.value));
+    this.props.dispatch(setParsed());
   }
   render() {
     return (
       <div>
-
         <TextField
+          name="name"
+          floatingLabelText="Vocabulary name"
+          fullWidth
+          onChange={this.setField}
+          value={this.props.Vocabulary.get("name")}
+        />
+        <TextField
+          style={{ border: "1px solid #ccc" }}
           name="terms"
-          label="Terms"
+          floatingLabelText="Term list"
           rowsMax={10}
           rows={10}
           multiLine
+          fullWidth
+          underlineShow={false}
           onChange={this.setField}
           value={this.props.Vocabulary.get("terms")}
         />
-        <br />
-        <RaisedButton
-          label="Format"
-          primary
-          icon={<FontIcon className="fa fa-caret-right" />}
-          onClick={() => {
-            console.log("They clicked it!");
-          }}
-        />
+
       </div>
     );
   }
