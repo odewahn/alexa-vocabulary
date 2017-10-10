@@ -27,7 +27,7 @@ export default class App extends React.Component {
         <Provider store={store}>
           <div>
             <h1>Hello world!</h1>
-            <VocabularyInput />
+            <VocabularyInput {...this.props} />
           </div>
 
         </Provider>

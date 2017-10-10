@@ -19,7 +19,16 @@ c++, cpp, c plus cplus`
 *********************************************************************/
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case "setVocabularyField":
+      return state.set(action.key, action.val);
     default:
       return state;
   }
+}
+
+/*********************************************************************
+||  Setters
+*********************************************************************/
+export function setVocabularyField(key, val) {
+  return { type: "setVocabularyField", key: key, val: val };
 }
