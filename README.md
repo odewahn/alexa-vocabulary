@@ -6,11 +6,11 @@
 * Copy the JSON model for the list
 * Paste it into your model file
 
-<img src="alexa-vocabulary.png" width="50%"/>
+<img src="public/alexa-vocabulary.png" width="50%"/>
 
 ## Developing
 
-This is a super bare bones tool with lots of room for improvement.  If your inclined to work on it:
+This is a super bare bones tool with lots of room for improvement.  If you're inclined to work on it:
 
 * Clone the repo
 * `npm install`
