@@ -1,6 +1,13 @@
+.githubBanner {
+	z-index: 999999999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
 
 html {
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {

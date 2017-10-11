@@ -8,6 +8,17 @@ class VocabularyOutput extends React.Component {
   render() {
     return (
       <div>
+        <TextField
+          name="vocabulary"
+          floatingLabelText="Vocabulary model"
+          disabled
+          rowsMax={15}
+          rows={15}
+          multiLine
+          fullWidth
+          underlineShow={false}
+          value={this.props.Vocabulary.get("vocabulary")}
+        />
         <RaisedButton
           label="Copy model to clipboard"
           primary
@@ -15,17 +26,6 @@ class VocabularyOutput extends React.Component {
           onClick={() => {
             copy(this.props.Vocabulary.get("vocabulary"));
           }}
-        />
-        <TextField
-          name="vocabulary"
-          floatingLabelText="Vocabulary model"
-          disabled
-          rowsMax={15}
-          rows={10}
-          multiLine
-          fullWidth
-          underlineShow={false}
-          value={this.props.Vocabulary.get("vocabulary")}
         />
       </div>
     );
